@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <script type="text/javascript" src="crypto-sha1-hmac-pbkdf2-ofb-aes.js"></script>
+    <script type="text/javascript" src="download2.js"></script>
+    <script src="main.js"></script>
+	</head>
+<body>
+
+
+	<form id="uploadForm" method="post">
+    <div>
+      File part size : <input type="number" id="partSize" min="10240" max="2048000" step="1024" value="512000" />
+    </div>
+    <div>
+      Encryption password : <input type="text" id="password" />
+    </div>
+    <div>
+      <input name="files[]" type="file" id="file" />
+    </div>
+    <div>
+      <input type="submit" name="send" id="send" />
+    </div>
+  </form>
+<br/>
+Decryption password:  
+  <input type="text" id="decryptkey"/><br/>
+  <div id="stored">
+    <ul id="fileList">
+    </ul>
+  </div>
+  <hr/>
+  <div id="status"></div>
+</body>
+</html>
